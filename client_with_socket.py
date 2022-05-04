@@ -14,8 +14,8 @@ port = 10050 # Port to listen on (non-privileged ports are > 1023)
 # now connect to the web server on the specified port number
 client_socket.connect((host_ip,port))
 
-#'b' or 'B'produces an instance of the bytes type instead of the str type
-#used in handling binary data from network connections
+# 'b' or 'B'produces an instance of the bytes type instead of the str type
+# used in handling binary data from network connections
 data = b""
 # Q: unsigned long long integer(8 bytes)
 payload_size = struct.calcsize("Q")
