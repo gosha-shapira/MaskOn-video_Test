@@ -18,18 +18,18 @@ socket_address = (host_ip,port)
 print('Socket created')
 
 # bind the socket to the host. 
-#The values passed to bind() depend on the address family of the socket
+# The values passed to bind() depend on the address family of the socket
 server_socket.bind(socket_address)
 print('Socket bind complete')
 
-#listen() enables a server to accept() connections
-#listen() has a backlog parameter. 
-#It specifies the number of unaccepted connections that the system will allow before refusing new connections.
+# listen() enables a server to accept() connections
+# listen() has a backlog parameter. 
+# It specifies the number of unaccepted connections that the system will allow before refusing new connections.
 server_socket.listen(5)
 print('Socket now listening')
 
-#'b' or 'B'produces an instance of the bytes type instead of the str type
-#used in handling binary data from network connections
+# 'b' or 'B'produces an instance of the bytes type instead of the str type
+# used in handling binary data from network connections
 data = b""
 # Q: unsigned long long integer(8 bytes)
 payload_size = struct.calcsize("Q")
